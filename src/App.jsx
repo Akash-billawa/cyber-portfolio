@@ -174,10 +174,11 @@ function AppContent() {
   };
 
   const handleCommand = (raw) => {
-    const input = raw.trim();
-    if (!input) return;
-    append(`$ ${input}`);
-    if (input === 'help') {
+    const normalizedInput = raw.trim();
+    if (!normalizedInput) return;
+    const command = normalizedInput.toLowerCase();
+    append(`$ ${normalizedInput}`);
+    if (command === 'help') {
       append([
         'Available commands:',
         '  help                - List commands',
@@ -187,26 +188,26 @@ function AppContent() {
       ]);
       return;
     }
-    if (input === 'cat about.txt') {
+    if (command === 'cat about.txt') {
       append(about.description);
       return;
     }
-    if (input === 'sudo' || input.startsWith('sudo ')) {
+    if (command === 'sudo' || command.startsWith('sudo ')) {
       append({ text: 'PERMISSION DENIED: You are not root.', variant: 'error' });
       return;
     }
-    if (input === 'decrypt') {
+    if (command === 'decrypt') {
       append({ text: 'Opening secure decrypt console…', variant: 'info' });
       window.location.href = '/sys-admin';
       return;
     }
-    if (input === './projects.sh') {
+    if (command === './projects.sh') {
       const el = document.getElementById('projects');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
       append('Navigating to projects…');
       return;
     }
-    if (input.startsWith('ping')) {
+    if (command.startsWith('ping')) {
       append([
         'PING google.com (142.250.72.14): 56 data bytes',
         '64 bytes from google.com: icmp_seq=0 ttl=56 time=18.3 ms',
@@ -218,7 +219,7 @@ function AppContent() {
       ]);
       return;
     }
-    append(`command not found: ${input}`);
+    append(`command not found: ${normalizedInput}`);
   };
   return (
     <Routes>

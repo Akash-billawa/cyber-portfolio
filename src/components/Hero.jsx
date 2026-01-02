@@ -9,16 +9,16 @@ const Hero = () => {
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-grid z-0"></div>
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--accent)] rounded-full blur-150 opacity-10 animate-pulse"></div>
+            <div className="hero-glow absolute" aria-hidden="true"></div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-4xl">
+                <div className="max-w-4xl hero-stack">
                     <Motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <span className="font-mono text-[var(--accent)] tracking-widest text-sm mb-4 block">
+                        <span className="font-mono text-[var(--accent)] tracking-widest text-sm mb-4 block hero-intro">
                             &lt; {personalInfo.role} /&gt;
                         </span>
                     </Motion.div>
@@ -27,7 +27,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="glitch text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 tracking-tighter"
+                        className="glitch text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 tracking-tighter drop-shadow-hero z-10 relative hero-title"
                         data-text={personalInfo.headline}
                     >
                         {personalInfo.headline}
@@ -37,7 +37,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-[var(--text-secondary)] mb-10 max-w-2xl leading-relaxed"
+                        className="text-xl md:text-2xl text-[var(--text-secondary)] mb-10 max-w-2xl leading-relaxed hero-subtext"
                     >
                         <HeroTyped subHeadline={personalInfo.subHeadline} />
                     </Motion.p>
@@ -46,7 +46,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="flex flex-wrap gap-4"
+                        className="flex flex-wrap gap-4 hero-cta-row"
                     >
                         <a href="#projects" className="btn btn-primary group" aria-label="View projects">
                             View Projects

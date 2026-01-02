@@ -41,16 +41,21 @@ const About = () => {
     return (
         <section id="about" className="about-section">
             <div className="about-section-container">
-                <motion.h2
-                    className="glitch-header"
-                    data-text="System.Identity"
+                <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
+                    className="glitch-header-wrapper"
                 >
-                    System.Identity
-                </motion.h2>
+                    <h2
+                        className="glitch-header"
+                        data-text="System.Identity"
+                    >
+                        System.Identity
+                    </h2>
+                    <span className="glitch-divider" aria-hidden="true"></span>
+                </motion.div>
 
                 <motion.div
                     className="command-deck"
