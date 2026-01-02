@@ -59,35 +59,41 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="navbar-mobile-menu"
+                        className="mobile-menu-overlay"
                     >
-                        <div className="container mx-auto px-6 py-4 flex flex-col gap-2">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="navbar-mobile-link"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {link.name}
-                                </a>
-                            ))}
+                        {navLinks.map((link) => (
                             <a
-                                href="#contact"
+                                key={link.name}
+                                href={link.href}
+                                className="mobile-menu-link"
                                 onClick={() => setIsOpen(false)}
-                                className="navbar-cta navbar-cta-mobile"
                             >
-                                HIRE ME
+                                {link.name}
                             </a>
-                        </div>
+                        ))}
+                        <a
+                            href="#contact"
+                            onClick={() => setIsOpen(false)}
+                            className="mobile-menu-cta"
+                        >
+                            HIRE ME
+                        </a>
+                        <button
+                            type="button"
+                            className="mobile-menu-close"
+                            onClick={() => setIsOpen(false)}
+                            aria-label="Close menu"
+                        >
+                            CLOSE
+                        </button>
                     </motion.div>
                 )}
             </AnimatePresence>
