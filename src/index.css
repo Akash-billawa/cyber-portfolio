@@ -65,6 +65,32 @@
   }
 }
 
+@media (max-width: 640px) {
+  .hero-glow {
+    transform: scale(0.75);
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    line-height: 1.15;
+  }
+
+  .hero-subtext {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    padding: 0 0.5rem;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+  }
+}
+
 .footer-trigger {
   color: #111;
   font-size: 0.85rem;
@@ -373,6 +399,47 @@
   }
 }
 
+@media (max-width: 640px) {
+  .projects-section {
+    padding: 4rem 0 2.5rem;
+  }
+
+  .projects-title {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-wrap: balance;
+    word-break: break-word;
+    padding: 0 0.5rem;
+  }
+
+  .projects-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .classified-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .classified-card {
+    border-radius: 16px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-image-wrapper {
+    height: 150px;
+  }
+
+  .execute-button {
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
 /* ========================================
    SKILLS SECTION - SYSTEM DIAGNOSTICS PANEL
    ======================================== */
@@ -598,6 +665,25 @@
   color: #000000;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 7vw !important;
+    width: 90% !important;
+    margin: 0 auto 1.5rem auto !important;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 10px 0;
+    border-radius: 4px;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+  }
+
+  h2 {
+    letter-spacing: 0 !important;
+  }
+}
+
 /* ========================================
    CONTACT SECTION - SECURE TRANSMISSION LINK
    ======================================== */
@@ -657,6 +743,22 @@
   margin: 0 auto;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .contact-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-wrap: balance;
+    word-break: break-word;
+    padding: 0 0.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.75rem;
+  }
 }
 
 .contact-grid {
@@ -886,6 +988,18 @@
   cursor: not-allowed;
 }
 
+@media (max-width: 768px) {
+  .transmit-button {
+    font-size: clamp(0.65rem, 2.3vw, 0.8rem);
+    letter-spacing: 0.08em;
+    padding: 0.75rem 0.5rem;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .contact-footer {
   margin-top: 3rem;
   text-align: center;
@@ -901,6 +1015,38 @@
 
   .contact-grid {
     gap: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-terminal,
+  .transmission-panel {
+    padding: 1.5rem;
+  }
+
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .status-chip {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .contact-container {
+    padding: 0 1.25rem;
   }
 }
 
@@ -1251,7 +1397,12 @@ html.admin-mode-active::-webkit-scrollbar-thumb {
 
 @media (max-width: 600px) {
   .skills-title {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-wrap: balance;
+    word-break: break-word;
+    padding: 0 0.5rem;
   }
 
   .hex-shell {
@@ -1489,6 +1640,12 @@ img {
 @media (max-width: 768px) {
   .container {
     padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
   }
 }
 
@@ -2267,6 +2424,21 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+}
+
+@media (max-width: 640px) {
+  .glitch-header {
+    white-space: normal;
+    font-size: clamp(1.5rem, 8vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-wrap: balance;
+    word-break: break-word;
+  }
+
+  .glitch-divider {
+    width: min(360px, 90vw);
+  }
 }
 
 .command-center-wrapper {

@@ -144,7 +144,7 @@ const Contact = () => {
                             </div>
 
                             <button type="submit" className="transmit-button" disabled={isTransmitting}>
-                                {isTransmitting ? '[ ENCRYPTING... ]' : '[ TRANSMIT_ENCRYPTED_PACKET ]'}
+                                {isTransmitting ? '[ ENCRYPTING... ]' : '[TRANSMIT_ENCRYPTED_PACKET]'}
                                 <Send size={16} aria-hidden="true" />
                             </button>
                         </form>
