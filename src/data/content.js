@@ -104,18 +104,20 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Calculator App",
-    description: "A sleek and efficient calculator application designed for quick calculations with a user-friendly interface.",
+    title: "NovaCalc – Scientific & Graph",
+    description: "A powerful scientific calculator with advanced graph plotting and a full unit converter — all in one clean, fast app. Perfect for students, engineers, and developers.",
     features: [
-      "Standard Arithmetic Operations",
-      "History of Calculations",
-      "Dark/Light Mode Toggle",
-      "Responsive Design"
+      "Scientific & Basic Calculator",
+      "Advanced Graph Plotting",
+      "40+ Unit & Currency Converters",
+      "Math History & Crypto Tracking",
+      "Offline Privacy & Dark/Light Mode"
     ],
-    tech: ["React", "CSS Modules", "JavaScript"],
+    tech: ["Flutter", "Dart", "Mobile App"],
     github: "#",
     demo: "#",
-    image: "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&q=80&w=800"
+    playstore: "https://play.google.com/store/apps/details?id=com.nova.calc",
+    image: "/novacalc.png"
   }
 ];
 

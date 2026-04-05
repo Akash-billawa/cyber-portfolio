@@ -128,6 +128,18 @@ const Projects = ({ unlocked = false }) => {
                                         [ LAUNCH DEMO ]
                                     </a>
                                 )}
+                                {project.playstore && (
+                                    <a
+                                        href={project.playstore}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="execute-button"
+                                        aria-label={`Get ${project.title} on Play Store`}
+                                        aria-describedby={`project-desc-${project.id}`}
+                                    >
+                                        [ GET ON PLAY STORE ]
+                                    </a>
+                                )}
                             </div>
                         </Motion.li>
                     ))}
